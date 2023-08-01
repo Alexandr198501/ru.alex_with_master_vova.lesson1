@@ -64,8 +64,6 @@ public class HomeWork2 {
     public static boolean leapYear(int year) {
         if (year % 4 == 0 && year / 1000 != 100) {
             return true;
-        } else if () {
-            return true;
         } else {
             return false;
         }
