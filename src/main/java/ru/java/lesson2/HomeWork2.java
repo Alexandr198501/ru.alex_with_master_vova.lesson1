@@ -7,7 +7,7 @@ public class HomeWork2 {
         checkNumber(-17);
         System.out.println(checkNumberSign(3)); // Обернул в sout для наглядности.
         printText("test", 3);
-        System.out.println(leapYear(1100)); // Обернул в sout для наглядности.
+        System.out.println(leapYear(2023)); // Обернул в sout для наглядности.
 
     }
 /*
@@ -62,10 +62,6 @@ public class HomeWork2 {
 100-го, при этом каждый 400-й – високосный.
  */
     public static boolean leapYear(int year) {
-        if (year % 4 == 0 && year / 1000 != 100) {
-            return true;
-        } else {
-            return false;
-        }
+        return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0);
     }
 }
