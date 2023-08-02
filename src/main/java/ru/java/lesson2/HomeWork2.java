@@ -62,6 +62,6 @@ public class HomeWork2 {
 100-го, при этом каждый 400-й – високосный.
  */
     public static boolean leapYear(int year) {
-        return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0);
+        return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0); //
     }
 }
