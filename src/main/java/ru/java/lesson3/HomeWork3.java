@@ -8,8 +8,9 @@ public class HomeWork3 {
 
     public static void main(String[] args) {
 
-        print1DArray();
-        System.out.println(checkBalance(new int[] {2, 2, 2, 1, 2, 2, 10, 1}));
+        //print1DArray();
+        //System.out.println(checkBalance(new int[] {2, 2, 2, 1, 2, 2, 10, 1}));
+        //arrayShift(new int[] {1, 2, 3, 4}, 1);
 /*
 1. Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1,
 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;
@@ -67,9 +68,9 @@ public class HomeWork3 {
         */
 
 
-        System.out.println(Arrays.toString(arr)); // prints the result of the first task
-        System.out.println(Arrays.toString(arr1)); // prints the result of the second task
-        System.out.println(Arrays.toString(arr2)); // prints the result of the third task
+        //System.out.println(Arrays.toString(arr)); // prints the result of the first task
+        //System.out.println(Arrays.toString(arr1)); // prints the result of the second task
+        //System.out.println(Arrays.toString(arr2)); // prints the result of the third task
     }
 
     /*
@@ -104,8 +105,8 @@ public class HomeWork3 {
                 minValue = arr4[i];
             }
             // prints the result of the sixth task
-            System.out.println("Максимальное значение массива = " + maxValue);
-            System.out.println("Минимальное значение массива = " + minValue);
+            //System.out.println("Максимальное значение массива = " + maxValue);
+            //System.out.println("Минимальное значение массива = " + minValue);
         }
 
 
@@ -140,12 +141,8 @@ checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
         }
         return count > 0;
     }
-}
 
-
-
-/*
-
+    /*
 8. *** Написать метод, которому на вход подается одномерный массив и число n (может быть
 положительным, или отрицательным), при этом метод должен сместить все элементы массива
 на n позиций. Элементы смещаются циклично. Для усложнения задачи нельзя пользоваться
@@ -153,3 +150,7 @@ checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
 6, 1] при n = -2 (на два влево) -> [ 6, 1, 3, 5 ]. При каком n в какую сторону сдвиг можете
 выбирать сами.
  */
+
+
+
+}
