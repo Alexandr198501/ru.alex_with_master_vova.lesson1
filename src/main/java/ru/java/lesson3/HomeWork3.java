@@ -145,18 +145,9 @@ checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
 6, 1] при n = -2 (на два влево) -> [ 6, 1, 3, 5 ]. При каком n в какую сторону сдвиг можете
 выбирать сами.
  */
-    public static void arrayShift(int[] in, int n) {
-        int[] freshIn = in;
-        if (n > 0){
-            for (int i = 0; i < in.length; i++){
-                for (int j = n; j < in.length; j++){
-                    in[i] = in[j];
-                }
-            }
-            System.out.println(Arrays.toString(in));
-        }
 
-    }
+
+
 
 
 }
