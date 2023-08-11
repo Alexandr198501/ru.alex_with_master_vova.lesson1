@@ -8,7 +8,7 @@ public class HomeWork3 {
 
     public static void main(String[] args) {
 
-        //print1DArray();
+        print1DArray(10,11);
         //System.out.println(checkBalance(new int[] {2, 2, 2, 1, 2, 2, 10, 1}));
         //arrayShift(new int[] {1, 2, 3, 4}, 1);
 /*
@@ -77,13 +77,8 @@ public class HomeWork3 {
     5. Написать метод, принимающий на вход два аргумента: len и initialValue, и возвращающий
     одномерный массив типа int длиной len, каждая ячейка которого равна initialValue;
      */
-    public static void print1DArray() {
-        // добавил текст запроса значения для наглядности
-        System.out.println("Введите желаемую длину массива:");
-        int len = sc.nextInt(); // присваиваю переменной введенное значение
-        // добавил текст запроса значения для наглядности
-        System.out.println("Введите число которым будет заполнен массив:");
-        int initialValue = sc.nextInt(); // присваиваю переменной введенное значение
+    public static void print1DArray(int len, int initialValue) {
+
         // инициализация и наполнение списка
         int[] array = new int[len];
         for (int i = 0; i < len; i++) {
@@ -95,20 +90,20 @@ public class HomeWork3 {
         6. * Задать одномерный массив и найти в нем минимальный и максимальный элементы
         */
 
-        int[] arr4 = {10, 25, 3, 7, 125, 0, -7, 48, 3273};
-        int maxValue = 0;
-        int minValue = maxValue;
+        int[] arr4 = {10, 25, 3, 7, -125, 0, -7, 48, 3273};
+        int maxValue = arr4[0];
+        int minValue = arr4[0];
         for (int i = 0; i < arr4.length; i++) {
             if (arr4[i] > maxValue) {
                 maxValue = arr4[i];
             }if (arr4[i] < minValue){
                 minValue = arr4[i];
             }
-            // prints the result of the sixth task
-            //System.out.println("Максимальное значение массива = " + maxValue);
-            //System.out.println("Минимальное значение массива = " + minValue);
-        }
 
+        }
+        // prints the result of the sixth task
+        //System.out.println("Максимальное значение массива = " + maxValue);
+        //System.out.println("Минимальное значение массива = " + minValue);
 
     }
 /*
@@ -150,7 +145,18 @@ checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
 6, 1] при n = -2 (на два влево) -> [ 6, 1, 3, 5 ]. При каком n в какую сторону сдвиг можете
 выбирать сами.
  */
+    public static void arrayShift(int[] in, int n) {
+        int[] freshIn = in;
+        if (n > 0){
+            for (int i = 0; i < in.length; i++){
+                for (int j = n; j < in.length; j++){
+                    in[i] = in[j];
+                }
+            }
+            System.out.println(Arrays.toString(in));
+        }
 
+    }
 
 
 }
