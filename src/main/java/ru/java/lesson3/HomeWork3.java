@@ -8,9 +8,14 @@ public class HomeWork3 {
 
     public static void main(String[] args) {
 
-        print1DArray(10,11);
+
+        //print1DArray(10, 11);
         //System.out.println(checkBalance(new int[] {2, 2, 2, 1, 2, 2, 10, 1}));
-        //arrayShift(new int[] {1, 2, 3, 4}, 1);
+        int[] array = {1, 2, 3};
+        System.out.println(Arrays.toString(array));
+
+        arrayShift(array, 2);
+        System.out.println(Arrays.toString(array));
 /*
 1. Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1,
 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;
@@ -90,33 +95,34 @@ public class HomeWork3 {
         6. * Задать одномерный массив и найти в нем минимальный и максимальный элементы
         */
 
-        int[] arr4 = {10, 25, 3, 7, -125, 0, -7, 48, 3273};
+        int[] arr4 = {-10, -25, -3, -7, -125, -15, -70, -48, -3273};
         int maxValue = arr4[0];
         int minValue = arr4[0];
-        for (int i = 0; i < arr4.length; i++) {
+        for (int i = 1; i < arr4.length; i++) {
             if (arr4[i] > maxValue) {
                 maxValue = arr4[i];
-            }if (arr4[i] < minValue){
+            }
+            if (arr4[i] < minValue) {
                 minValue = arr4[i];
             }
 
         }
         // prints the result of the sixth task
-        //System.out.println("Максимальное значение массива = " + maxValue);
-        //System.out.println("Минимальное значение массива = " + minValue);
+        System.out.println("Максимальное значение массива = " + maxValue);
+        System.out.println("Минимальное значение массива = " + minValue);
 
     }
-/*
-7. ** Написать метод, в который передается не пустой одномерный целочисленный массив,
-метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части
-массива равны.
-Примеры:
-checkBalance([2, 2, 2, 1, 2, 2, ||| 10, 1]) → true, т.е. 2 + 2 + 2 + 1 + 2 + 2 = 10 + 1
-checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
- */
+
+    /*
+    7. ** Написать метод, в который передается не пустой одномерный целочисленный массив,
+    метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части
+    массива равны.
+    Примеры:
+    checkBalance([2, 2, 2, 1, 2, 2, ||| 10, 1]) → true, т.е. 2 + 2 + 2 + 1 + 2 + 2 = 10 + 1
+    checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
+     */
     public static boolean checkBalance(int[] in) {
         int sumLeft = 0;
-        int sumRight = 0;
         int sum = 0;
         int count = 0;
         // вычисляю сумму элементов массива
@@ -127,10 +133,10 @@ checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
         // элементов массива сумме оставшихся правых элементов массива.
         for (int i = 0; i < in.length; i++) {
             sumLeft += in[i];
-            sumRight = sum - sumLeft;
+            int sumRight = sum - sumLeft;
             // если в массиве есть место, в котором сумма левой и правой части
             // массива равны, увеличиваю счетчик на 1
-            if (sumLeft == sumRight){
+            if (sumLeft == sumRight) {
                 count++;
             }
         }
@@ -146,5 +152,23 @@ checkBalance([1, 1, 1, ||| 2, 1]) → true, т.е. 1 + 1 + 1 = 2 + 1
 выбирать сами.
  */
 
+
+
+    private static void arrayShift(int[] array, int n) {
+
+
+        if (n < 0) {
+            n += array.length;
+        }
+        for (int i = 0; i < n; i++) {
+            int element = array[0];
+            for (int j = 0; j < array.length - 1; j++) {
+                array[j] = array[j + 1];
+            }
+            array[array.length - 1] = element;
+
+        }
+
+    }
 
 }
