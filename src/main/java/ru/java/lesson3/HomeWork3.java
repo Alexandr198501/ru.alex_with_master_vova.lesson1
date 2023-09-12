@@ -14,7 +14,7 @@ public class HomeWork3 {
         int[] array = {1, 2, 3};
         System.out.println(Arrays.toString(array));
 
-        arrayShift(array, -1);
+        arrayShift(array, 2);
         System.out.println(Arrays.toString(array));
 /*
 1. Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1,
