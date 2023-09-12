@@ -59,24 +59,18 @@ public class HomeWork4 {
 
     // Проверка победы
     public static boolean checkWin(char element) {
-        int count_x = 0;
-        int count_y = 0;
-// ПЕРЕПИСАТЬ!!! СЧИТАЕТ ОБЩЕЕ КОЛ-ВО Х или О НА ПОЛЕ, А НЕ В ОДНОЙ ЛИНИИ!!!
-        for (int i = 0; i < SIZE; i++) {
-            for (int j = 0; j < SIZE; j++) {
-                if (map[i][j] == 'X') {
-                    count_x += 1;
-                }
-                if (map[i][j] == 'O') {
-                    count_y += 1;
-                }
-            }
-            if (count_x == DOTS_TO_WIN || count_y == DOTS_TO_WIN) {
-                return true;
 
-            }
+        for (int i = 0; i < SIZE; i++) {
+            if (map[i][0] == element && map[i][1] == element && map[i][2] == element) return true;
+            if (map[0][i] == element && map[1][i] == element && map[2][i] == element) return true;
+            if (map[0][0] == element && map[1][1] == element && map[2][2] == element) return true;
+            if (map[2][0] == element && map[1][1] == element && map[0][2] == element) return true;
         }
         return false;
+    }
+
+// Проверка победы из методички
+// Горизонталь
 //        if(map[0][0] == element && map[0][1] == element && map[0][2] == element){
 //            return true;
 //        }
@@ -86,7 +80,7 @@ public class HomeWork4 {
 //        if(map[2][0] == element && map[2][1] == element && map[2][2] == element) {
 //            return true;
 //        }
-//
+//  Вертикаль
 //        if(map[0][0] == element && map[1][0] == element && map[2][0] == element){
 //            return true;
 //        }
@@ -96,7 +90,7 @@ public class HomeWork4 {
 //        if(map[0][2] == element && map[1][2] == element && map[2][2] == element){
 //            return true;
 //        }
-//
+//  Диагональ
 //        if(map[0][0] == element && map[1][1] == element && map[2][2] == element){
 //            return true;
 //        }
@@ -105,7 +99,6 @@ public class HomeWork4 {
 //        }
 //        return false;
 
-    }
 
     // Проверяет остались ли не заполненные ячейки на игровом поле
     public static boolean isMapFull() {
