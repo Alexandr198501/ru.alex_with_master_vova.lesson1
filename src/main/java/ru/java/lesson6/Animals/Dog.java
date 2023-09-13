@@ -3,13 +3,11 @@ package ru.java.lesson6.Animals;
 public class Dog extends Animals {
     static int dogCount;
 
-    public Dog() {
-        dogCount++;
-    }
+
 
     public Dog(String name) {
-        this();
         this.name = name;
+        dogCount++;
     }
 
     @Override
