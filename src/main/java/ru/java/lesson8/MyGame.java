@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class MyGame extends JFrame {
     private int count = 0;
-    private int maxCount = 3;
+    private final int MAX_COUNT = 3;
     private int randomNumber;
     JTextField textField;
 
@@ -59,16 +59,16 @@ public class MyGame extends JFrame {
     }
 
     public void tryToAnswer(int answer) {
-        if (count == maxCount) {
+        if (count == MAX_COUNT) {
             textField.setText("Попытки закончились. Перезапустите игру!");
         } else if (answer == randomNumber) {
             textField.setText("Вы угадали число!!! Загаданное число: " + randomNumber + " Нажмите Restart.");
         } else if (answer > randomNumber) {
             count += 1;
-            textField.setText("Не угадали! Число меньше, чем " + answer + ". Осталось попыток: " + (maxCount - count));
+            textField.setText("Не угадали! Число меньше, чем " + answer + ". Осталось попыток: " + (MAX_COUNT - count));
         } else {
             count += 1;
-            textField.setText("Не угадали! Число больше, чем " + answer + ". Осталось попыток: " + (maxCount - count));
+            textField.setText("Не угадали! Число больше, чем " + answer + ". Осталось попыток: " + (MAX_COUNT - count));
         }
     }
 }

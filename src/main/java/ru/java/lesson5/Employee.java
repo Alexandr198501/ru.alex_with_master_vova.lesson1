@@ -8,11 +8,11 @@ public class Employee {
     private String position;
     private String email;
     private String phone;
-    private float salary;
+    private double salary;
     private int age;
 
     // 2. Конструктор класса должен заполнять эти поля при создании объекта.
-    public Employee(String fio, String position, String email, String phone, float salary, int age) {
+    public Employee(String fio, String position, String email, String phone, double salary, int age) {
         this.fio = fio;
         this.position = position;
         this.email = email;
@@ -56,12 +56,12 @@ public class Employee {
         this.phone = phone;
     }
 
-    public float getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(float salary) {
-        if (salary >= 20000.00f) {
+    public void setSalary(double salary) {
+        if (salary >= 20000.00) {
             this.salary = salary;
         } else {
             System.out.println("Сотрудник заслуживает большего!");

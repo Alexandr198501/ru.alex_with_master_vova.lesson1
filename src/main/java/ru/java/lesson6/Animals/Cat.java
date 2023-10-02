@@ -1,7 +1,8 @@
 package ru.java.lesson6.Animals;
 
 public class Cat extends Animals {
-    static int catCount;
+    static int catCount = 0;
+    private final int MAX_RUN_DISTANCE = 200;
 
     public Cat() {
         catCount++;
@@ -14,8 +15,7 @@ public class Cat extends Animals {
 
     @Override
     public void run(int distance) {
-        if (distance <= 200 && distance >= 0) {
-            this.distance = distance;
+        if (distance <= MAX_RUN_DISTANCE && distance >= 0) {
             System.out.println("Кот " + name + " пробежал " + distance + " метров.");
         } else {
             System.out.println("Кот " + name + " не может пробежать дистанцию " + distance + " м.");
